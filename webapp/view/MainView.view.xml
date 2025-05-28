@@ -1,0 +1,30 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:core="sap.ui.core" controllerName="com.acn.training.activity1.controller.MainView">
+<Page id="page" title="{i18n>title}">
+    <content>
+            <Label text="" id="spacer" width="100%"/>    
+            <Label text="Name:" id="lblName" width="10%" textAlign="Right" vAlign="Bottom"/>
+            <Input xmlns="sap.m" value="" id="inpName" width="50%"/> 
+            <Label text="" id="spacer1" width="100%"/>
+
+            <Label text="Street/No:" id="lblStreet" width="10%" textAlign="Right" vAlign="Bottom"/>
+            <Input xmlns="sap.m" value="" id="inpStreet" width="30%"/>
+            <Input xmlns="sap.m" value="" id="inpStreetNo" width="20%"/>
+            <Label text="" id="spacer2" width="100%"/>
+
+            <Label text="Zip Code/City: " id="lblZipCode" width="10%" textAlign="Right" vAlign="Bottom"/>
+            <Input xmlns="sap.m" value="" id="inpZipCode" width="20%"/>
+            <Input xmlns="sap.m" value="" id="inpCity" width="30%"/>
+            <Label text="" id="spacer3" width="100%"/>
+
+            <Label text="Country:" id="lblCountry" width="10%" textAlign="Right" vAlign="Bottom"/>            
+           <Select xmlns="sap.m"  id="selCountry" items="{/countries}" showSecondaryValues="false">
+                <core:Item id="itmCountry" key="{code}" text="{name}" />
+            </Select>
+         
+            <Button xmlns="sap.m" text="Save" id="btnSave"/>            
+            <Button xmlns="sap.m" text="Clear" id="btnClear" type="Reject" press="onClearPress" />
+            <Label text="" id="spacer4" width="100%"/>
+    </content>
+
+    </Page>
+</mvc:View>
